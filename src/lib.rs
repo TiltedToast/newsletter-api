@@ -8,15 +8,15 @@ use std::net::TcpListener;
 
 #[derive(Deserialize)]
 struct FormData {
-    email: String,
-    name: String,
+    _email: String,
+    _name: String,
 }
 
 async fn health_check() -> HttpResponse {
     HttpResponse::Ok().finish()
 }
 
-async fn subscribe(form: Form<FormData>) -> HttpResponse {
+async fn subscribe(_form: Form<FormData>) -> HttpResponse {
     HttpResponse::Ok().finish()
 }
 
